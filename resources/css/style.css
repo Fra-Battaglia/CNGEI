@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    --color-primary: #257048;
+    --color-secondary: #D71F16;
+    --color-yellow: #F5E500;
+    --color-gray: #333;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+	color: var(--color-gray);
+}
+
+.container {
+	margin: 0 auto;
+}
+
+/* Utilities */
+
+.text-primary {
+	color: var(--color-primary);
+}
+.bg-primary {
+	background-color: var(--color-primary);
+}
+
+.text-secondary {
+	color: var(--color-secondary);
+}
+.bg-secondary {
+	background-color: var(--color-secondary);
+}
+
+.text.yellow {
+	color: var(--color-yellow);
+}
+.bg-yellow {
+	background-color: var(--color-yellow);
+}
+
+.text-gray {
+	color: var(--color-gray);
+}
+.bg-gray {
+	background-color: var(--color-gray);
+}
+
+nav ul li, form > button, form input {
+	border-radius: 0.375rem;
+	padding: 0.5rem 1rem;
+}
+nav ul li:hover {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Form */
+
+form {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	max-width: 40%;
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: 1fr;
+	margin-top: 1rem;
+}
+
+form input {
+	border: 2px solid var(--color-gray);
+	display: block;
+	width: 100%;
+}
+
+form input:focus {
+	outline: none;
+	border-color: var(--color-primary);
+}
+
+form > button {
+	grid-column: 1 / -1;
+	background-color: var(--color-primary);
+	color: white;
+	cursor: pointer;
+}
