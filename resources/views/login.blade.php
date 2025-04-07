@@ -10,20 +10,31 @@
 		@vite(['resources/css/style.css'])
 	@endif
 
-    <title>Registrazione Nuovo Utente</title>
+    <title>Login Utente</title>
 </head>
 <body>
     <div class="container">
         <h1 class="font-bold text-2xl text-center">Login utente</h1>
-        <form action="{{ route('login_user') }}" method="POST">
+
+        @if ($errors->any())
+            <div class="alert text-secondary mt-4">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+        
+        <form action="{{ route('login') }}" method="POST">
             @csrf
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" class="form-control" value="{{ old('email') }}" required>
+                <input type="email" id="email" name="email" class="form-control" value="{{ old('email') }}">
             </div>
             <div class="form-group">
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" class="form-control" required>
+                <input type="password" id="password" name="password" class="form-control">
             </div>
             <button type="submit" class="btn btn-primary">Login</button>
         </form>

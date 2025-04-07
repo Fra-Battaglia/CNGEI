@@ -25,27 +25,27 @@
                 </ul>
             </div>
         @endif
-        <form action="{{ route('register_user') }}" method="POST">
+        <form action="{{ route('register_user') }}" method="POST" id="user-register">
             @csrf
             <div class="form-group">
                 <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" class="form-control" value="{{ old('nome') }}" required>
+                <input type="text" id="nome" name="nome" class="form-control" value="{{ old('nome') }}">
             </div>
             <div class="form-group">
                 <label for="cognome">Cognome:</label>
-                <input type="text" id="cognome" name="cognome" class="form-control" value="{{ old('cognome') }}" required>
+                <input type="text" id="cognome" name="cognome" class="form-control" value="{{ old('cognome') }}">
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" class="form-control" value="{{ old('email') }}" required>
+                <input type="email" id="email" name="email" class="form-control" value="{{ old('email') }}">
             </div>
             <div class="form-group">
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" class="form-control" required>
+                <input type="password" id="password" name="password" class="form-control">
             </div>
             <div class="form-group">
                 <label for="password_confirmation">Conferma Password:</label>
-                <input type="password" id="password_confirmation" name="password_confirmation" class="form-control" required>
+                <input type="password" id="password_confirmation" name="password_confirmation" class="form-control">
             </div>
             <button type="submit" class="btn btn-primary">Registrati</button>
         </form>

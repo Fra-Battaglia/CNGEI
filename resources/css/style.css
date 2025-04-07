@@ -64,11 +64,14 @@ form {
 	position: relative;
 	left: 50%;
 	transform: translateX(-50%);
-	max-width: 40%;
 	display: grid;
 	gap: 1rem;
-	grid-template-columns: 1fr;
 	margin-top: 1rem;
+}
+
+form#user-register {
+	grid-template-columns: 1fr;
+	max-width: 40%;
 }
 
 form input {
@@ -87,4 +90,17 @@ form > button {
 	background-color: var(--color-primary);
 	color: white;
 	cursor: pointer;
+}
+
+form.delete  {
+	display: block;
+	padding: 0; margin: 0;
+	left: 0;
+	transform: translateX(0);
+}
+
+form.delete > button {
+	border-radius: 0;
+	padding: 0; margin: 0;
+	background-color: transparent;
 }
