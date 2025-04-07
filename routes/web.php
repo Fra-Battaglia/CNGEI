@@ -40,7 +40,7 @@ Route::get('/login', [UserController::class, 'login_form'])->name('login_user_fo
 Route::post('/login', [UserController::class, 'login'])->name('login');
 
 // Logout utente
-Route::post('/logout', [UserController::class, 'logout'])->name('logout_user')->middleware('auth');
+Route::post('/logout', [UserController::class, 'logout'])->name('logout')->middleware('auth');
 
 // Recupero iscritti
 Route::get('/dashboard', [IscrittoController::class, 'index'])->name('dashboard')->middleware('auth');
